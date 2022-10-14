@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/amaranth"
+        android:text="@string/select_the_date"
+        android:textColor="#220707"
+        android:textColorHint="@color/black"
+        android:textSize="28dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="401dp"
+        android:layout_height="390dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="10dp"
+        android:focusableInTouchMode="true">
+
+    </CalendarView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarView"
+        android:layout_alignStart="@+id/calendarView"
+        android:layout_alignEnd="@+id/calendarView"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="105dp"
+        android:text="Confirm Date" />
+
+</RelativeLayout>

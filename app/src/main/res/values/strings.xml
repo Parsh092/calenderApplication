@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">calenderApplication</string>
+    <string name="select_the_date">Select The Date</string>
+</resources>
