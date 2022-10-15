@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "12625767190",
+    "project_id": "calenderapplication-3035f",
+    "storage_bucket": "calenderapplication-3035f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12625767190:android:5813d658334d81d35e7e37",
+        "android_client_info": {
+          "package_name": "com.parsh.calenderapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12625767190-odioisljudrb0kbll8remi77q70j8ci7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEbH1I4ancKYtDBuqD0Ucy6Wo3MxB2Gkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12625767190-odioisljudrb0kbll8remi77q70j8ci7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
