@@ -3,9 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/CalenderApplication/app/src/main/res/layout/activity_appointment.xml" value="0.2" />
-        <entry key="..\:/CalenderApplication/app/src/main/res/layout/activity_approval.xml" value="0.23645833333333333" />
-        <entry key="..\:/CalenderApplication/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/CalenderApplication/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
       </map>
     </option>
   </component>

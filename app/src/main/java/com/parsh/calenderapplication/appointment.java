@@ -1,7 +1,6 @@
 package com.parsh.calenderapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +25,7 @@ ProgressDialog dialog;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment);
+
         textView = findViewById(R.id.textView2);
         name = findViewById(R.id.name);
         phone_num = findViewById(R.id.phone_Num);
@@ -33,7 +33,7 @@ ProgressDialog dialog;
         vehicle_name = findViewById(R.id.vehicle_name);
         vehicle_num = findViewById(R.id.phone_Num);
         address = findViewById(R.id.address);
-submit = findViewById(R.id.submit);
+        submit = findViewById(R.id.submit);
         Bundle extras = getIntent().getExtras();
         String s = extras.getString("value1");
         textView.setText(s);

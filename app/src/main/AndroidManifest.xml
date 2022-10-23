@@ -14,12 +14,6 @@
         android:theme="@style/Theme.CalenderApplication"
         tools:targetApi="31">
         <activity
-            android:name=".approval"
-            android:exported="false" />
-        <activity
-            android:name=".appointment"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -28,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".approval"
+            android:exported="false" />
+        <activity
+            android:name=".appointment"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
