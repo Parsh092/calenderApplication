@@ -3,6 +3,7 @@ package com.parsh.calenderapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -70,6 +71,17 @@ public class MainActivity extends AppCompatActivity {
                 compare = compare.replace("-", "");
                 date.setText(daate);
                 String finalCompare = compare;
+
+                Dialog dialog = new Dialog(MainActivity.this);
+                dialog.setContentView(R.layout.slot_dialog);
+                Button nine_thirty = dialog.findViewById(R.id.nine_thirty);
+                Button eleven_thirty= dialog.findViewById(R.id.eleven_thirty);
+                Button one_fourtyfive = dialog.findViewById(R.id.one_fourtyfive);
+                Button four = dialog.findViewById(R.id.four);
+                Button exit = dialog.findViewById(R.id.exit);
+
+                dialog.show();
+
                 databaseReference.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DataSnapshot> task) {
@@ -95,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+
             }
         });
 
