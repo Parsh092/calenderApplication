@@ -9,8 +9,8 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/booking"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/booking" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,6 +68,17 @@
 
         <Button
             android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="10dp"
+            android:padding="3dp"
+            android:text="exit"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/Textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"

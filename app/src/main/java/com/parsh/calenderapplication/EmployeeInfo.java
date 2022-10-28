@@ -4,12 +4,11 @@ public class EmployeeInfo {
     private String date,slot;
 
 
-    public EmployeeInfo() {
-    }
+    public EmployeeInfo() {}
 
-    public EmployeeInfo(String Date,String slot) {
+    public EmployeeInfo(String Date, String slot) {
         this.date = Date;
-        this.slot=slot;
+        this.slot = slot;
     }
 
     public String getDate() {
@@ -20,11 +19,7 @@ public class EmployeeInfo {
         this.date = date;
     }
 
-    public String getSlot() {
-        return slot;
-    }
+    public String getSlot() {return slot;}
 
-    public void setSlot(String slot) {
-        this.slot = slot;
-    }
+    public void setSlot(String slot) {this.slot = slot;}
 }

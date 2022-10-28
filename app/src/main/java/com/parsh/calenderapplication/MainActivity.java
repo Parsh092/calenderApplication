@@ -75,42 +75,182 @@ public class MainActivity extends AppCompatActivity {
                 Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setContentView(R.layout.slot_dialog);
                 Button nine_thirty = dialog.findViewById(R.id.nine_thirty);
-                Button eleven_thirty= dialog.findViewById(R.id.eleven_thirty);
+                Button eleven_thirty = dialog.findViewById(R.id.eleven_thirty);
                 Button one_fourtyfive = dialog.findViewById(R.id.one_fourtyfive);
                 Button four = dialog.findViewById(R.id.four);
                 Button exit = dialog.findViewById(R.id.exit);
+                TextView textView = dialog.findViewById(R.id.Textview);
 
-                dialog.show();
-
-                databaseReference.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                nine_thirty.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-                        if (task.isSuccessful()) {
-                            if (task.getResult().exists()) {
-                                DataSnapshot dataSnapshot = task.getResult();
-                                String firstName = String.valueOf(dataSnapshot.child("date").getValue());
+                    public void onClick(View v) {
+                        textView.setText("ninethirty");
+                        databaseReference.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    if (task.getResult().exists()) {
+                                        DataSnapshot dataSnapshot = task.getResult();
+                                        String firstName = String.valueOf(dataSnapshot.child("date").getValue());
+                                        String slot = String.valueOf(dataSnapshot.child("slot").getValue());
+                                        String s = textView.getText().toString();
 //                                date.setText(finalCompare+""+firstName);
+//                                        date.setText(slot);
+                                        if (finalCompare.equals(firstName) && s.equals(slot)) {
+                                            Toast.makeText(MainActivity.this, "This slot is already selected", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            employeeInfo.setDate(finalCompare);
+                                            employeeInfo.setSlot(s);
+                                            databaseReference.setValue(employeeInfo);
+                                            Toast.makeText(MainActivity.this, "Slot is Successfully selected", Toast.LENGTH_SHORT).show();
 
-                                if (finalCompare.equals(firstName)) {
-                                    Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+                                    }
                                 } else {
-                                    employeeInfo.setDate(finalCompare);
-                                    databaseReference.setValue(employeeInfo);
-                                    Toast.makeText(MainActivity.this, "Date is Successfully selected", Toast.LENGTH_SHORT).show();
-                                }
-                            } else {
-                                Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
 
-                            Toast.makeText(MainActivity.this, "Failed to read", Toast.LENGTH_SHORT).show();
-                        }
+                                    Toast.makeText(MainActivity.this, "Failed to read", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+                });
+                eleven_thirty.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        textView.setText("eleventhirty");
+                        databaseReference.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    if (task.getResult().exists()) {
+                                        DataSnapshot dataSnapshot = task.getResult();
+                                        String firstName = String.valueOf(dataSnapshot.child("date").getValue());
+                                        String slot = String.valueOf(dataSnapshot.child("slot").getValue());
+                                        String s = textView.getText().toString();
+//                                date.setText(finalCompare+""+firstName);
+//                                        date.setText(slot);
+                                        if (finalCompare.equals(firstName) && s.equals(slot)) {
+                                            Toast.makeText(MainActivity.this, "This slot is already selected", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            employeeInfo.setDate(finalCompare);
+                                            employeeInfo.setSlot(s);
+                                            databaseReference.setValue(employeeInfo);
+                                            Toast.makeText(MainActivity.this, "Slot is Successfully selected", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+
+                                    Toast.makeText(MainActivity.this, "Failed to read", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+
+                });
+                one_fourtyfive.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        textView.setText("onefourtyfive");
+                        databaseReference.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    if (task.getResult().exists()) {
+                                        DataSnapshot dataSnapshot = task.getResult();
+                                        String firstName = String.valueOf(dataSnapshot.child("date").getValue());
+                                        String slot = String.valueOf(dataSnapshot.child("slot").getValue());
+                                        String s = textView.getText().toString();
+//                                date.setText(finalCompare+""+firstName);
+//                                        date.setText(slot);
+                                        if (finalCompare.equals(firstName) && s.equals(slot)) {
+                                            Toast.makeText(MainActivity.this, "This slot is already selected", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            employeeInfo.setDate(finalCompare);
+                                            employeeInfo.setSlot(s);
+                                            databaseReference.setValue(employeeInfo);
+                                            Toast.makeText(MainActivity.this, "Slot is Successfully selected", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+
+                                    Toast.makeText(MainActivity.this, "Failed to read", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+                });
+                four.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        textView.setText("four");
+                        databaseReference.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    if (task.getResult().exists()) {
+                                        DataSnapshot dataSnapshot = task.getResult();
+                                        String firstName = String.valueOf(dataSnapshot.child("date").getValue());
+                                        String slot = String.valueOf(dataSnapshot.child("slot").getValue());
+                                        String s = textView.getText().toString();
+//                                date.setText(finalCompare+""+firstName);
+//                                        date.setText(slot);
+                                        if (finalCompare.equals(firstName) && s.equals(slot)) {
+                                            Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            employeeInfo.setDate(finalCompare);
+                                            employeeInfo.setSlot(s);
+                                            databaseReference.setValue(employeeInfo);
+                                            Toast.makeText(MainActivity.this, "Slot is Successfully selected", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+
+                                    Toast.makeText(MainActivity.this, "Failed to read", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
                     }
                 });
 
+
+//                databaseReference.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+//                        if (task.isSuccessful()) {
+//                            if (task.getResult().exists()) {
+//                                DataSnapshot dataSnapshot = task.getResult();
+//                                String firstName = String.valueOf(dataSnapshot.child("date").getValue());
+//                                String slot = String.valueOf(dataSnapshot.child("slot").getValue());
+////                                date.setText(finalCompare+""+firstName);
+//                                date.setText(slot);
+//                                if (finalCompare.equals(firstName)) {
+//                                    Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+//                                } else {
+//                                    employeeInfo.setDate(finalCompare);
+//                                    databaseReference.setValue(employeeInfo);
+//                                    Toast.makeText(MainActivity.this, "Date is Successfully selected", Toast.LENGTH_SHORT).show();
+//                                }
+//                            } else {
+//                                Toast.makeText(MainActivity.this, "This date is already selected", Toast.LENGTH_SHORT).show();
+//                            }
+//                        } else {
+//
+//                            Toast.makeText(MainActivity.this, "Failed to read", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+
+        dialog.show();
             }
         });
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
